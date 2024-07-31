@@ -1,0 +1,23 @@
+2024-07-30 19:17:09,265 - sync - INFO - Created directory: ./replica/
+2024-07-30 19:17:09,265 - __main__ - INFO - Synchronized ./source to ./replica/
+2024-07-30 19:17:19,274 - __main__ - INFO - Synchronized ./source to ./replica/
+2024-07-30 19:17:29,278 - __main__ - INFO - Synchronized ./source to ./replica/
+2024-07-31 15:55:58,860 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/
+2024-07-31 15:56:08,870 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/
+2024-07-31 15:56:18,873 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/
+2024-07-31 15:56:28,877 - sync - INFO - Created directory: ./replica/test_folder
+2024-07-31 15:56:28,879 - sync - INFO - Copied file: ./source/test_folder\test_folder.txt to ./replica/test_folder\test_folder.txt
+2024-07-31 15:56:28,879 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/
+2024-07-31 15:56:38,892 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/
+2024-07-31 15:56:48,894 - sync - INFO - Removed file: ./replica/.\test.txt
+2024-07-31 15:56:48,894 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/
+2024-07-31 15:56:58,898 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/
+2024-07-31 15:57:08,902 - sync - INFO - Copied file: ./source/test_folder\test_folder.txt to ./replica/test_folder\test_folder.txt
+2024-07-31 15:57:08,902 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/
+2024-07-31 15:57:18,915 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/
+2024-07-31 15:57:28,917 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/
+2024-07-31 15:57:38,920 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/
+2024-07-31 15:57:48,922 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/
+2024-07-31 15:57:58,926 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/
+2024-07-31 15:58:08,927 - sync - INFO - Copied file: ./source/test_folder\test_folder.txt to ./replica/test_folder\test_folder.txt
+2024-07-31 15:58:08,932 - __main__ - INFO - Periodic operation for synchronizing ./replica/ to ./source/

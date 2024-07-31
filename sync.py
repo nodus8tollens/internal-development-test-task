@@ -1,5 +1,8 @@
 import os
 import shutil
+import logging
+
+logger = logging.getLogger(__name__)
 
 def sync_folders(source, replica):
     # Checks if source and replica exist
@@ -7,6 +10,8 @@ def sync_folders(source, replica):
         raise ValueError(f"Source folder '{source}' does not exist.")
     if not os.path.exists(replica):
         os.makedirs(replica)
+        logger.info(f"Created directory: {replica}")
+
     
     # Creates a directory tree and yields a 3-tuple (root, list of subdirectories, list of files)
     # It walks through the tree of directories/subdirectories/and files
@@ -20,6 +25,7 @@ def sync_folders(source, replica):
         # Ensures the replicated subdirectories exist
         if not os.path.exists(replica_root):
             os.makedirs(replica_root)
+            logger.info(f"Created directory: {replica_root}")
         
         # Iterates through files and copies them
         for file in files:
@@ -31,12 +37,14 @@ def sync_folders(source, replica):
             if (not os.path.exists(replica_file) or 
                 os.path.getmtime(source_file) > os.path.getmtime(replica_file)):
                 shutil.copy2(source_file, replica_file)
+                logger.info(f"Copied file: {source_file} to {replica_file}")
         
         # Remove surplus files in replica that are not in source folder
         for replica_file in os.listdir(replica_root):
             replica_file_path = os.path.join(replica_root, replica_file)
             if replica_file not in files and os.path.isfile(replica_file_path):
                 os.remove(replica_file_path)
+                logger.info(f"Removed file: {replica_file_path}")
     
     # Remove extra directories in replica by walking it bottom-to-top
     for root, dirs, files in os.walk(replica, topdown=False):
@@ -49,3 +57,6 @@ def sync_folders(source, replica):
             # recursivelly remove the directory in the replica folder and all of its contents
             if not os.path.exists(source_dir):
                 shutil.rmtree(replica_dir)
+                logger.info(f"Removed directory: {replica_dir}")
+
+
